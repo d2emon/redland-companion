@@ -1,5 +1,6 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+import Edges from '../edges';
 
 function Origin(props) {
   const {
@@ -7,12 +8,12 @@ function Origin(props) {
   } = props;
 
   return (
-    <Container>
-      <Row>
-        <Col md={6}>Происхождение:</Col>
-        <Col>{ origin }</Col>
-      </Row>
-    </Container>
+    <Card className="my-2">
+      <Card.Header>Происхождение: { origin.title }</Card.Header>
+      <Card.Body>
+        <Edges edges={origin.edges} />
+      </Card.Body>
+    </Card>
   );
 }
 

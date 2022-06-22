@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import CharacterBrief from './CharacterBrief';
 import generateGender from './genders/genders';
@@ -6,67 +6,76 @@ import generateMovement from './movements/movements';
 import generateName from './names/names';
 import generateOrigin from './origins/origins';
 import generateTemplate from './templates/templates';
-
-/*
-def generate():
-    movement = generate_movement()
-    template = generate_template()
-    origin = generate_origin()
-
-    print(f"Происхождение:  {origin}")
-    print(f"Образ:          {template}")
-    print(f"Движение:       {movement}")
-
-*/
+import { dice } from './stats';
 
 function CharGen() {
+  const size = 4;
+
   const [ characters, setCharacters ] = useState([]);
 
-  const removeCharacterById = useCallback((id) => {
-    // setCharacters(characters.filter((character, characterId) => (characterId !== index)))
-    console.log(id, characters);
-    characters.forEach((character, characterId) => {
-      console.log(characterId, id, characterId === id);
+  const removeCharacter = (index) => () => {
+    setCharacters((prevCharacters) => {
+      return prevCharacters.filter((character) => (character.characterId !== index));
     });
-    /*
-    setCharacters(characters.filter((character, characterId) => {
-      console.log(characterId, index, characterId === index);
-      return true;
-    }));
-    */
-  }, [characters]);
+  };
 
-  const addCharacter = useCallback(() => {
-    const index = characters.length;
+  const addCharacter = () => {
     const gender = generateGender();
     const name = generateName(gender);
     const movement = generateMovement();
     const origin = generateOrigin();
     const template = generateTemplate();
-    setCharacters([
-      ...characters,
-      <CharacterBrief
-        name={name}
-        gender={gender}
-        origin={origin}
-        template={template}
-        movement={movement}
-        onDelete={() => removeCharacterById(index)}
-      />,
+    const stats = {
+      agility: template.agility,
+      smarts: template.smarts,
+      spirit: template.spirit,
+      strength: template.strength,
+      vigor: template.vigor,
+    };
+    let charisma = 0;
+
+    if (origin && origin.edges) {
+      origin.edges.forEach((edge) => {
+        Object.keys(stats).forEach((key) => {
+          stats[key] += edge[key] - dice.d4;
+        });
+        charisma += edge.charisma;
+      });
+    }
+
+    const vigorDice = stats.vigor * 2 + 2;
+    console.log(vigorDice);
+    const tough = 2 + Math.floor(vigorDice / 2)
+
+    setCharacters(prevCharacters => [
+      ...prevCharacters,
+      {
+        characterId: prevCharacters.length,
+        gender,
+        name,
+        movement,
+        origin,
+        template,
+        stats,
+        pace: 6,
+        parry: 2,
+        charisma,
+        tough,
+        onDelete: removeCharacter(prevCharacters.length),
+      },
     ])
-
-  }, [characters, removeCharacterById]);
-
-  const size = 4;
+  };
 
   return <Container>
     <Row>
-      { characters.map((character, index) => <Col
-        key={index}
+      { characters.map((character) => <Col
+        key={character.characterId}
         md={size}
         className="my-2"
       >
-        { character }
+        <CharacterBrief
+          { ...character }
+        />
       </Col>) }
       <Col md={size} className="my-2">
         <Card>

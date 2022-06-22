@@ -4,6 +4,7 @@ import Gender from './genders';
 import Movement from './movements';
 import Name from './names';
 import Origin from './origins';
+import Stats from './stats';
 import Template from './templates';
 
 function CharacterBrief(props) {
@@ -12,9 +13,16 @@ function CharacterBrief(props) {
     name = 'Name',
     movement = 'Зелёное',
     template = 'Template',
-    origin = 'Origin',
+    origin = {},
+    stats = {},
+    pace = 6,
+    parry = 2,
+    charisma = 0,
+    tough = 2,
     onDelete = () => {},
   } = props;
+
+
 
   return (
     <Card>
@@ -22,7 +30,7 @@ function CharacterBrief(props) {
         <Row>
           <Col><Name name={name} /></Col>
           <Col md={4}>
-            { /* <Button onClick={onDelete}>Удалить</Button> */ }
+            <Button onClick={onDelete}>Удалить</Button>
           </Col>
         </Row>
       </Card.Header>
@@ -30,8 +38,15 @@ function CharacterBrief(props) {
         <Container>
           <Gender gender={gender} />
           <Movement movement={movement} />
-          <Origin origin={origin} />
           <Template template={template} />
+          <Origin origin={origin} />
+          <Stats
+            pace={pace}
+            parry={parry}
+            charisma={charisma}
+            tough={tough}
+            {...stats}
+          />
         </Container>
       </Card.Body>
     </Card>

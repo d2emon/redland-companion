@@ -10,7 +10,7 @@ function Template(props) {
     <Container>
       <Row>
         <Col md={6}>Образ:</Col>
-        <Col>{ template }</Col>
+        <Col>{ template.title }</Col>
       </Row>
     </Container>
   );
