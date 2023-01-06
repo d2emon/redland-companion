@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import About from './about/About';
-import CharGen from './chargen';
+import About from '../about/About';
+import CharGen from '../chargen';
 // import './App.css';
 
 function App() {
