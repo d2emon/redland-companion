@@ -3,6 +3,7 @@ import * as DISTANCE from './distances';
 import * as DURATION from './durations';
 import * as RANKS from './ranks';
 import * as STATS from './stats';
+import * as BACKGROUND from './backgrounds';
 
 const powers = [
     {
@@ -11,6 +12,16 @@ const powers = [
         points: 'специальное',
         range: DISTANCE.TOUCH,
         duration: DURATION.withUnits(STATS.SMARTS),
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+        ],
         description: <>
             <p>Эта сила позволяет персонажу вытащить из кармана, сумки или даже из воздуха
             какой-нибудь мелкий предмет. Стоимость в ПС зависит от предмета. Однако он
@@ -54,6 +65,16 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 1),
         examples: 'мистическое свечение, кожа из камня, эфирные доспехи, масса насекомых или червей.',
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+        ],
         description: <>
             <p>Доспех образует вокруг персонажа поле магической защиты или настоящий панцирь,
             который выполняет функцию брони.</p>
@@ -69,6 +90,14 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 100, DISTANCE.METERS),
         duration: DURATION.withExtra(10, null, DURATION.MINUTES),
         examples: 'маг делает несколько жестов.',
+        backgrounds: [
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.QUACKERY,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Эта сила позволяет магам говорить с животными и управлять ими. Действует только на
             существ, чей интеллект находится на уровне животных (Ж), а не человека. Эта сила также
@@ -91,6 +120,16 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(1, 1, DURATION.HOURS),
         examples: 'знак на лбу, зелья, жабры.',
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.QUACKERY,
+
+            BACKGROUND.ACTIONISM,
+        ],
         description: <>
             <p>Иногда искатели приключений путешествуют под водой, в космосе и в иных опасных
             условиях. Эта сила защитит их от гибели на огромных глубинах или в лучах палящего
@@ -113,6 +152,17 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.INSTANT,
         examples: 'наложение рук, прикосновение священным символом, молитва.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.QUACKERY,
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>При помощи данной силы можно излечить свежие ранения. Её нужно задействовать в
             течение «золотого часа». При помощи этой силы нельзя вылечить ранения, полученные
@@ -134,6 +184,16 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(1, 1, DURATION.HOURS),
         examples: 'светящиеся глаза, расширенные зрачки, эхолокация.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Если иллюминация при помощи силы свет видна всем, в том числе, врагам, то ночное
             зрение можно использовать тогда, когда обнаружение нежелательно.</p>
@@ -151,6 +211,18 @@ const powers = [
         points: '1-3',
         range: DISTANCE.SELF,
         duration: DURATION.withExtra(1, null, DURATION.HOURS),
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
             <p>Эта сила защищает заклинателя от сверхъестественных существ (нежить, чудовища),
             относящихся к его Движению. Он создаёт вокруг себя область, соответствующую малому
@@ -171,6 +243,17 @@ const powers = [
         range: DISTANCE.weapon(12, 24, 48),
         duration: DURATION.SPECIAL,
         examples: 'сгустки энергии, оглушающая бомба, неимоверно громкий звук, ослепительная вспышка света.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>При успехе на проверке навыка у мага, жертвы, оказавшиеся в пределах среднего
             шаблона, должны осуществить успешную проверку выносливости или окажутся в шоке.</p>
@@ -184,6 +267,17 @@ const powers = [
         range: DISTANCE.weapon(12, 24, 48),
         duration: DURATION.INSTANT,
         examples: 'яркая вспышка, песок в глаза, сгущающиеся тени.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
             <p>Эта сила ослепляет одну или несколько целей. Жертвы должны осуществить проверку
             ловкости со штрафом -2, чтобы отвести взгляд и избежать эффекта (и со штрафом -4 при
@@ -203,6 +297,13 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.withExtra(3, 1),
         examples: 'мистическое чутьё, духовное наставничество, знание формы.',
+        backgrounds: [
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.QUACKERY,
+            BACKGROUND.SHAMANISM,
+        ],
         description: <>
             <p>Знание — сила. Тот, кто способен оценить силу противника прежде, чем вступит в бой,
             может получить огромное преимущество.</p>
@@ -222,6 +323,18 @@ const powers = [
         points: '3',
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.SPECIAL,
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.ACTIONISM,
+        ],
         description: <>
             <p>Эта сила позволяет персонажу парализовать цель, лишая её возможности сопротивляться.
             При активации осуществляется встречная проверка сверхъестественного навыка мага против
@@ -239,6 +352,17 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 1),
         examples: 'зелье из толчёного паука, ниточка паутины, кусок щупальца.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Маги зачастую становятся привлекательной целью в бою из-за своих сверхъестественных
             навыков, и эта сила позволит им своевременно устраниться из боя. Конечно, для этой силы
@@ -259,6 +383,16 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.INSTANT,
         examples: 'молитва, наложение рук, лечебный тонизирующий напиток.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.QUACKERY,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Эта сила снимает один уровень усталости, при подъёме — два, а также выводит
             персонажа из шока.</p>
@@ -274,6 +408,16 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.withExtra(3, 2),
         examples: 'исчезновение под землёй и появление в другом месте.',
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+        ],
         description: <>
             <p>Эта сила позволяет магу, стоящему на голой земле, скрыться под её поверхностью. Он
             может спрятаться в подземной норе либо прорыть ход куда угодно. Его шаг под землёй
@@ -295,6 +439,17 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(10, 1, DURATION.MINUTES, 10),
         examples: 'слова, знаки, движения руками.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.QUACKERY,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Сила позволяет герою разговаривать, читать и писать на другом языке. Это должен быть
             язык развитой цивилизации (не язык животных). Подъём при проверке сверхъестественного
@@ -310,6 +465,16 @@ const powers = [
         Пункты силы: 2-6.
         Дистанция: касание.
         Длительность: мгновенно/10 минут.`,
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Эффект Поломки данной силы позволяет персонажу сломать любое обычное устройство,
             например, привести в негодность пистолет или заклинить замок. Восстановление
@@ -384,6 +549,13 @@ const powers = [
         range: DISTANCE.CONE,
         duration: DURATION.INSTANT,
         examples: 'поток огня, света или другой энергии.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
             <p>Эта сила позволяет поражать врагов потоком смертоносного пламени или иной энергии.
             </p>
@@ -400,6 +572,12 @@ const powers = [
         range: DISTANCE.SELF,
         duration: DURATION.withExtra(1, 1, DURATION.MINUTES),
         examples: 'ликантропия, талисманы, татуировки.',
+        backgrounds: [
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+        ],
         description: <>
             <p>Многие культуры хранят легенды о шаманах и колдунах, которые умели превращаться в
             животных. Эта сила позволяет превращаться в зверей, но лишь в обычных зверей, хотя
@@ -438,29 +616,29 @@ const powers = [
                 </thead>
                 <tbody>
                     <tr>
-                        <th>3</th>
-                        <th>Новичок</th>
-                        <th>Ястреб, крыса, кролик, кот, ворона</th>
+                        <td>3</td>
+                        <td>Новичок</td>
+                        <td>Ястреб, крыса, кролик, кот, ворона</td>
                     </tr>
                     <tr>
-                        <th>4</th>
-                        <th>Закалённый</th>
-                        <th>Пёс, волк, лошадь, змея, орёл</th>
+                        <td>4</td>
+                        <td>Закалённый</td>
+                        <td>Пёс, волк, лошадь, змея, орёл</td>
                     </tr>
                     <tr>
-                        <th>5</th>
-                        <th>Ветеран</th>
-                        <th>Матёрый волк, бык, кабан</th>
+                        <td>5</td>
+                        <td>Ветеран</td>
+                        <td>Матёрый волк, бык, кабан</td>
                     </tr>
                     <tr>
-                        <th>6</th>
-                        <th>Герой</th>
-                        <th>Медведь большой, ящер (крокодил)</th>
+                        <td>6</td>
+                        <td>Герой</td>
+                        <td>Медведь большой, ящер (крокодил)</td>
                     </tr>
                     <tr>
-                        <th>7</th>
-                        <th>Легенда</th>
-                        <th>Оборотень (нет способности «инфекция»)</th>
+                        <td>7</td>
+                        <td>Легенда</td>
+                        <td>Оборотень (нет способности «инфекция»)</td>
                     </tr>
                 </tbody>
             </table>        
@@ -473,6 +651,20 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS),
         duration: DURATION.withExtra(3, 1),
         examples: 'призыв элементаля, призрачного пса, астрального двойника.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.LUCK,
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
             <p>Эта сила позволяет персонажу призвать верного и послушного слугу. При успехе можно
             поместить союзника в любую точку в пределах дистанции действия силы. При подъёме
@@ -501,29 +693,29 @@ const powers = [
                 </thead>
                 <tbody>
                     <tr>
-                        <th>3</th>
-                        <th>Новичок</th>
-                        <th>телохранитель, опытный вояка</th>
+                        <td>3</td>
+                        <td>Новичок</td>
+                        <td>телохранитель, опытный вояка</td>
                     </tr>
                     <tr>
-                        <th>4</th>
-                        <th>Закалённый</th>
-                        <th>матёрый волк, огр</th>
+                        <td>4</td>
+                        <td>Закалённый</td>
+                        <td>матёрый волк, огр</td>
                     </tr>
                     <tr>
-                        <th>5</th>
-                        <th>Ветеран</th>
-                        <th>элементаль (любого вида)</th>
+                        <td>5</td>
+                        <td>Ветеран</td>
+                        <td>элементаль (любого вида)</td>
                     </tr>
                     <tr>
-                        <th>6</th>
-                        <th>Герой</th>
-                        <th>страж</th>
+                        <td>6</td>
+                        <td>Герой</td>
+                        <td>страж</td>
                     </tr>
                     <tr>
-                        <th>7</th>
-                        <th>Легенда</th>
-                        <th>двойник</th>
+                        <td>7</td>
+                        <td>Легенда</td>
+                        <td>двойник</td>
                     </tr>
                 </tbody>
             </table>
@@ -602,29 +794,29 @@ const powers = [
                 </thead>
                 <tbody>
                     <tr>
-                        <th>3</th>
-                        <th>Новичок</th>
-                        <th>Малый механизм (патефон, часы)</th>
+                        <td>3</td>
+                        <td>Новичок</td>
+                        <td>Малый механизм (патефон, часы)</td>
                     </tr>
                     <tr>
-                        <th>4</th>
-                        <th>Закалённый</th>
-                        <th>Автомобиль, крупный механизм (станок)</th>
+                        <td>4</td>
+                        <td>Закалённый</td>
+                        <td>Автомобиль, крупный механизм (станок)</td>
                     </tr>
                     <tr>
-                        <th>5</th>
-                        <th>Ветеран</th>
-                        <th>Броневик</th>
+                        <td>5</td>
+                        <td>Ветеран</td>
+                        <td>Броневик</td>
                     </tr>
                     <tr>
-                        <th>6</th>
-                        <th>Герой</th>
-                        <th>Танк, Аэроплан</th>
+                        <td>6</td>
+                        <td>Герой</td>
+                        <td>Танк, Аэроплан</td>
                     </tr>
                     <tr>
-                        <th>7</th>
-                        <th>Легенда</th>
-                        <th>Бронепоезд, дирижабль</th>
+                        <td>7</td>
+                        <td>Легенда</td>
+                        <td>Бронепоезд, дирижабль</td>
                     </tr>
                 </tbody>
             </table>      
@@ -643,29 +835,29 @@ const powers = [
                 </thead>
                 <tbody>
                     <tr>
-                        <th>3</th>
-                        <th>Новичок</th>
-                        <th>Дух-защитник</th>
+                        <td>3</td>
+                        <td>Новичок</td>
+                        <td>Дух-защитник</td>
                     </tr>
                     <tr>
-                        <th>4</th>
-                        <th>Закалённый</th>
-                        <th>Эйдолон возмездия</th>
+                        <td>4</td>
+                        <td>Закалённый</td>
+                        <td>Эйдолон возмездия</td>
                     </tr>
                     <tr>
-                        <th>5</th>
-                        <th>Ветеран</th>
-                        <th>Эйдолон доблести</th>
+                        <td>5</td>
+                        <td>Ветеран</td>
+                        <td>Эйдолон доблести</td>
                     </tr>
                     <tr>
-                        <th>6</th>
-                        <th>Герой</th>
-                        <th>Архонт-геконтоарх</th>
+                        <td>6</td>
+                        <td>Герой</td>
+                        <td>Архонт-геконтоарх</td>
                     </tr>
                     <tr>
-                        <th>7</th>
-                        <th>Легенда</th>
-                        <th>Астральный двойник (см. «Дневник Авантюриста 2»)</th>
+                        <td>7</td>
+                        <td>Легенда</td>
+                        <td>Астральный двойник (см. «Дневник Авантюриста 2»)</td>
                     </tr>
                 </tbody>
             </table>
@@ -687,29 +879,29 @@ const powers = [
                 </thead>
                 <tbody>
                     <tr>
-                        <th>3</th>
-                        <th>Новичок</th>
-                        <th>Сошка</th>
+                        <td>3</td>
+                        <td>Новичок</td>
+                        <td>Сошка</td>
                     </tr>
                     <tr>
-                        <th>4</th>
-                        <th>Закалённый</th>
-                        <th>Сполох</th>
+                        <td>4</td>
+                        <td>Закалённый</td>
+                        <td>Сполох</td>
                     </tr>
                     <tr>
-                        <th>5</th>
-                        <th>Ветеран</th>
-                        <th>Вихрь</th>
+                        <td>5</td>
+                        <td>Ветеран</td>
+                        <td>Вихрь</td>
                     </tr>
                     <tr>
-                        <th>6</th>
-                        <th>Герой</th>
-                        <th>Хозяйчик</th>
+                        <td>6</td>
+                        <td>Герой</td>
+                        <td>Хозяйчик</td>
                     </tr>
                     <tr>
-                        <th>7</th>
-                        <th>Легенда</th>
-                        <th>Хозяин</th>
+                        <td>7</td>
+                        <td>Легенда</td>
+                        <td>Хозяин</td>
                     </tr>
                 </tbody>
             </table>
@@ -738,29 +930,29 @@ const powers = [
                 </thead>
                 <tbody>
                     <tr>
-                        <th>3</th>
-                        <th>Новичок</th>
-                        <th>Солдат (кадавр)</th>
+                        <td>3</td>
+                        <td>Новичок</td>
+                        <td>Солдат (кадавр)</td>
                     </tr>
                     <tr>
-                        <th>4</th>
-                        <th>Закалённый</th>
-                        <th>Бандит/Матрос/Повстанец (блуждающий Пламень)</th>
+                        <td>4</td>
+                        <td>Закалённый</td>
+                        <td>Бандит/Матрос/Повстанец (блуждающий Пламень)</td>
                     </tr>
                     <tr>
-                        <th>5</th>
-                        <th>Ветеран</th>
-                        <th>Рубака (бес)</th>
+                        <td>5</td>
+                        <td>Ветеран</td>
+                        <td>Рубака (бес)</td>
                     </tr>
                     <tr>
-                        <th>6</th>
-                        <th>Герой</th>
-                        <th>Малефик/Блатной (мара)</th>
+                        <td>6</td>
+                        <td>Герой</td>
+                        <td>Малефик/Блатной (мара)</td>
                     </tr>
                     <tr>
-                        <th>7</th>
-                        <th>Легенда</th>
-                        <th>Террорист (демон-воитель)</th>
+                        <td>7</td>
+                        <td>Легенда</td>
+                        <td>Террорист (демон-воитель)</td>
                     </tr>
                 </tbody>
             </table>
@@ -793,6 +985,13 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.SPECIAL,
         examples: 'клеевая бомба, лоза, наручники, паутина.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.WITCHCRAFT,
+        ],
         description: <>
             <p>Эта сила позволяет персонажу обездвижить цель при помощи длинных волос, паутины или
             чего-нибудь ещё, что может превратиться в путы.</p>
@@ -817,6 +1016,16 @@ const powers = [
             DURATION.withExtra(3, 1),
         ),
         examples: 'иллюзорный факел, тьма, туман.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+        ],
         description: <>
             <p>Эта сила позволяет влиять на условия видимости (создавать или рассеивать тень) и
             является довольно простой, но при этом весьма эффективной. При помощи этой силы можно
@@ -833,6 +1042,17 @@ const powers = [
         title: 'Связь',
         points: '1',
         range: DISTANCE.withUnits(STATS.SMARTS, 10, DISTANCE.KILOMETERS),
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Позволяет магу передать конкретной разумной цели (как человеку, так и высшей нежити)
             цели одно короткое сообщение (на усмотрение ведущего; одно короткое предложение (до
@@ -850,6 +1070,18 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.INSTANT,
         examples: 'гипнотические огни, кратковременные иллюзии, громкий шум.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Вселение смуты в ряды врагов — мощное подспорье в сражении. Именно эту возможность
             и даёт сила смятения. При успехе колдуна цель должна осуществить проверку смекалки со
@@ -866,6 +1098,16 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 1),
         examples: 'цветное сияние, руны, магические знаки, электрические разряды, шипы на лезвии.',
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Эта сила применяется для накладывания чар на оружие. В случае дистанционного оружия
             сила воздействует на одну полную обойму: 20 снарядов, патронов, стрел, либо полный
@@ -882,6 +1124,14 @@ const powers = [
         range: DISTANCE.weapon(12, 24, 48),
         duration: DURATION.INSTANT,
         examples: 'огненные, ледяные, светящиеся, разноцветные стрелы, стрелы из тьмы, насекомые.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
             <p>Стрела — сила магов, но она может быть и выстрелом из бластера, разрядом энергии,
             лучом очищающего света и т. д. Урон от стрелы равен 2d6.</p>
@@ -902,6 +1152,13 @@ const powers = [
         range: DISTANCE.fixed(12),
         duration: DURATION.INSTANT,
         examples: 'разряд молнии, силовой таран, поток огня.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
             <p>Струя — это бьющий из заклинателя поток разрушительной магической энергии.
             Прочертите от клетки с заклинателем прямую линию толщиной в одну клетку и длиной в 12
@@ -920,6 +1177,16 @@ const powers = [
         Пункты силы: 2-3
         Дистанция: средний шаблон (СШ)
         Длительность: смекалка/час`,
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+ 
+            BACKGROUND.LUCK,
+       ],
         description: <>
             <p>Эта сила создаёт вокруг заклинателя область, соответствующую среднему шаблону. Пока
             сила активна, ни одно существо, крупнее крысы, не может незаметно проникнуть на
@@ -941,6 +1208,19 @@ const powers = [
             DURATION.withExtra(1, 1, DURATION.HOURS),
         ),
         examples: 'пассы руками, шёпот.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.QUACKERY,
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Эта сила позволяет персонажу почувствовать близость сверхъестественного существа,
             увидеть магический предмет или обнаружить эффект какой-нибудь силы в поле зрения,
@@ -962,6 +1242,16 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.INSTANT,
         examples: 'жесты, наводящая ужас иллюзия, могильный холод.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>При помощи этой силы можно наслать на жертву смертельный ужас. Площадь воздействия
             силы — большой шаблон. Каждое существо, попавшее в область действия силы, должно
@@ -976,6 +1266,14 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.withExtra(3, 1),
         examples: 'пара простых жестов.',
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.SHAMANISM,
+        ],
         description: <>
             <p>Избравший эту силу может совершать простые трюки с основными стихиями.</p>
             <p>Стихии варьируются в зависимости от игрового мира. Возможные эффекты определяет
@@ -1005,6 +1303,17 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS),
         duration: DURATION.withExtra(3, 1),
         examples: 'физические изменения, сияющая аура.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Эта сила позволяет повысить значение любого параметра цели на одну ступень при
             успехе и на две при подъёме. Параметр может превысить d12, и каждое превышение даёт +1
@@ -1026,6 +1335,16 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 1),
         examples: 'размытые движения, изменчивые контуры, акробатика.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Воин, которому нужно моментально добраться до врага, обычно использует эту силу. Она
             также популярна у персонажей, которые спешат убежать от того, чего лучше не видеть.
@@ -1041,6 +1360,16 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS),
         duration: DURATION.withExtra(1),
         examples: 'псионическое вторжение, прозревание духа.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Эта сила позволяет персонажу читать чужие мысли. Чтобы её активировать, необходимо
             осуществить встречную проверку сверхъестественного навыка колдуна против смекалки
@@ -1057,6 +1386,14 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 1),
         examples: 'мистический щит, порыв ветра, призрачный слуга, отклоняющий стрелы.',
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+        ],
         description: <>
             <p>Эта сила действует очень по-разному. При помощи этой силы можно как непосредственно
             отражать атаки, так и сделать цель атак размытой. Главное, что сила защищает от атак.
@@ -1073,6 +1410,13 @@ const powers = [
         range: DISTANCE.weapon(24, 48, 96),
         duration: DURATION.INSTANT,
         examples: 'огненные шары, сфера тьмы, град разноцветных стрел, рой насекомых.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
             <p>Взрыв — сила, бьющая по площадям, при помощи которой можно поразить сразу множество
             противников. Персонаж вначале выбирает центр, затем осуществляет проверку навыка. На
@@ -1091,6 +1435,16 @@ const powers = [
         range: DISTANCE.CONE,
         duration: DURATION.INSTANT,
         examples: 'вздымающаяся земля, порыв резкого ветра, нахлынувшая вода.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
             <p>Эта сила позволяет персонажу сбить с ног сразу же большое количество врагов.
             Персонаж осуществляет проверку сверхъестественного навыка и ставит перед собой конусный
@@ -1110,6 +1464,15 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 1),
         examples: 'жест, молитва, шёпот.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Даже боевой маг не может тратить всё своё время на изучение новых манёвров и боевых
             искусств. Для тех, кто любит сходиться с противником в ближнем бою или хочет улучшить
@@ -1131,6 +1494,16 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.withExtra(3, 2),
         examples: 'узелок на обрывке верёвки, замедленные движения, сбивающая с толку невидимая обезьяна. Умелые бойцы и монстры со звериными рефлексами могут атаковать в мгновение ока. Замедлить их ре-акцию — значит лишить их преимущества.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+        ],
         description: <>
             <p>Персонаж осуществляет встречную проверку сверхъестественного навыка против характера
             жертвы. При успехе движение становится обычным действием, налагая на цель штраф за
@@ -1145,38 +1518,21 @@ const powers = [
     },
     {
         rank: RANKS.SEASONED,
-        title: 'Зомби (Создать нежить)',
-        points: '3 / тело',
-        range: DISTANCE.withUnits(STATS.SMARTS, 2),
-        duration: DURATION.SPECIAL,
-        examples: 'начертание символов на трупах, подбрасывание костей, могилы, книги в переплёте из человеческой кожи, вскрывающая могилы и перемалывающая тела огромная машина.',
-        description: <>
-            <p>Эта сила позволяет персонажу на время призвать себе на службу низшую нежить своего
-            Движения. Количество мертвецов зависит от количества потраченных ПС. Они подчинены
-            одарённому, но не блещут интеллектом и порой слишком буквально исполняют приказы. При
-            успехе нежить служит в течение часа, при подъёме — 1d6 часов. При двух подъёмах мертвец
-            остаётся «живым» целый день.</p>
-            <p>Невозможно создать нежить на пустом месте, поэтому телом придётся озаботиться
-            заранее. Трупы могут быть не очень свежими. При помощи этой силы можно поднять из
-            мёртвых тела, которые ждали годами. Кладбища, морги и поля сражений отлично подойдут в
-            качестве источников тел. Сила должна применяться к телу погибшего сторонника того же
-            Движения, что и у персонажа, или на человека без Движения. Если сила применяется к телу
-            сторонника другого Движения, она не срабатывает. Конкретный вид созданной нежити
-            определяется Движением заклинателя:</p>
-            <p>Красное: спец-единица с нужной функцией.</p>
-            <p>Белое: Низший Бессмертный. Маг становится символом для созданного Бессмертного.</p>
-            <p>Зелёное: упырь.</p>
-            <p>Чёрное: кадавр.</p>
-            <p>Подробнее о возможностях высшей и низшей нечисти см. главу «Нежить», стр. 112</p>
-        </>,
-    },
-    {
-        rank: RANKS.SEASONED,
         title: 'Зоркость',
         points: '3',
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 1),
         examples: 'незримо помеченные цели, орлиные глаза.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.QUACKERY,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Чары наделяют персонажа возможностью видеть на огромные расстояния. При успехе
             штрафы за дистанционные атаки сокращаются вдвое (-1 для средней, —2 для дальней
@@ -1191,6 +1547,16 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(10, 1, DURATION.MINUTES, 10),
         examples: 'изменённые черты лица, иллюзорная внешность, другая причёска.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Позволяет персонажу принять вид (но не перенять способности) другого персонажа.
             Базовая стоимость — 3 ПС +1 пункт за каждую ступень, сокращающую разницу в размерах.
@@ -1209,6 +1575,16 @@ const powers = [
         range: DISTANCE.SELF,
         duration: DURATION.withExtra(3, 1),
         examples: 'порошок, зелье, радужные огни.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Невидимость — мощное подспорье в сражении, а ещё можно подглядывать за девушками в
             раздевалке.</p>
@@ -1230,6 +1606,16 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 2),
         examples: 'размытые движения, гиперактивность.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>Сила дарует персонажу невероятное проворство. При успехе персонаж может осуществлять
             два полных хода вместо одного на одной инициативе (это считается одним раундом).
@@ -1245,6 +1631,13 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 1),
         examples: 'огненная аура, шипы, электрическое поле.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
             <p>Эта сила создаёт вокруг персонажа ауру, наносящую урон каждому, кто соприкоснётся с
             ней в ближнем бою. Любой оппонент, успешно атаковавший персонажа с соседней клетки,
@@ -1268,6 +1661,16 @@ const powers = [
         Пункты силы: 2
         Дистанция: касание
         Длительность: 1 раунд`,
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
             <p>С помощью этой силы заклинатель может распознать тот или иной мистический предмет,
             его свойства, особенности действия и т.п. независимо от Движения, благодаря которому
@@ -1283,6 +1686,15 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS),
         duration: DURATION.INSTANT,
         examples: 'пассы руками, шёпот.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.WITCHCRAFT,
+        ],
         description: <>
             <p>Эта сила позволяет персонажу рассеять вражеские чары и чудеса, прервать действие
             изобретения безумной науки, а также суперсилы. На природные особенности — к примеру, на
@@ -1310,6 +1722,13 @@ const powers = [
         Пункты силы: 2
         Дистанция: Наложение: касание. Отслеживание : смекалка х 10 км
         Длительность: 24 часа`,
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.WITCHCRAFT,
+        ],
         description: <>
             <p>На цель накладывается на 1 сутки "маячок" (за дополнительный 1 ПС для наложения
             "маячка" нужна не сама цель, но принадлежащий ей предмет), который можно использовать
@@ -1325,10 +1744,69 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.INSTANT,
         examples: 'вихрь, неуправляемый полтергейст, отталкивающее поле.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.ACTIONISM,
+        ],
         description: <>
-            <p>Эти непредсказуемые чары позволяют магу поменять картину на поле битвы в один момент, разбросав цели в случайных направлениях.</p>
-            <p>При успехе персонаж помещает средний шаблон в пределах дистанции действия силы. Каждый персонаж, застигнутый смерчем, должен осуществить про¬верку физической силы (со штрафом —2 при подъёме у колдуна). Любую цель при провале откидывает на 2d6 клеток в неизвестном направлении (брось¬те d12; выпавшая цифра и есть направление по ци-ферблату), после чего она распластывается. Если цель сталкивается с твёрдым препятствием, то она оказывается в шоке. Цели, находящиеся в укрытии, могут вычесть модификатор укрытия из расстояния, которое предстоит пролететь (до минимума 0), а па¬рящие в воздухе мишени получают дополнительный штраф —2 к проверке физической силы. Кроме того, бросьте d6, чтобы узнать, швырнуло ли летевшего к земле (1-2), остался ли он на том же уровне (3-4) или его подбросило выше (5-6).</p>
-            <p>Дополнительные эффекты: если потратить удвоенное количества пунктов силы, то смерч охватит площадь, соответствующую большому шаблону.</p>
+            <p>Эти непредсказуемые чары позволяют магу поменять картину на поле битвы в один
+            момент, разбросав цели в случайных направлениях.</p>
+            <p>При успехе персонаж помещает средний шаблон в пределах дистанции действия силы.
+            Каждый персонаж, застигнутый смерчем, должен осуществить проверку физической силы (со
+            штрафом —2 при подъёме у колдуна). Любую цель при провале откидывает на 2d6 клеток в
+            неизвестном направлении (бросьте d12; выпавшая цифра и есть направление по циферблату),
+            после чего она распластывается. Если цель сталкивается с твёрдым препятствием, то она
+            оказывается в шоке. Цели, находящиеся в укрытии, могут вычесть модификатор укрытия из
+            расстояния, которое предстоит пролететь (до минимума 0), а парящие в воздухе мишени
+            получают дополнительный штраф —2 к проверке физической силы. Кроме того, бросьте d6,
+            чтобы узнать, швырнуло ли летевшего к земле (1-2), остался ли он на том же уровне (3-4)
+            или его подбросило выше (5-6).</p>
+            <p>Дополнительные эффекты: если потратить удвоенное количества пунктов силы, то смерч
+            охватит площадь, соответствующую большому шаблону.</p>
+        </>,
+    },
+    {
+        rank: RANKS.SEASONED,
+        title: 'Зомби (Создать нежить)',
+        points: '3 / тело',
+        range: DISTANCE.withUnits(STATS.SMARTS, 2),
+        duration: DURATION.SPECIAL,
+        examples: 'начертание символов на трупах, подбрасывание костей, могилы, книги в переплёте из человеческой кожи, вскрывающая могилы и перемалывающая тела огромная машина.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.DEMONOLOGY,
+        ],
+        description: <>
+            <p>Эта сила позволяет персонажу на время призвать себе на службу низшую нежить своего
+            Движения. Количество мертвецов зависит от количества потраченных ПС. Они подчинены
+            одарённому, но не блещут интеллектом и порой слишком буквально исполняют приказы. При
+            успехе нежить служит в течение часа, при подъёме — 1d6 часов. При двух подъёмах мертвец
+            остаётся «живым» целый день.</p>
+            <p>Невозможно создать нежить на пустом месте, поэтому телом придётся озаботиться
+            заранее. Трупы могут быть не очень свежими. При помощи этой силы можно поднять из
+            мёртвых тела, которые ждали годами. Кладбища, морги и поля сражений отлично подойдут в
+            качестве источников тел. Сила должна применяться к телу погибшего сторонника того же
+            Движения, что и у персонажа, или на человека без Движения. Если сила применяется к телу
+            сторонника другого Движения, она не срабатывает. Конкретный вид созданной нежити
+            определяется Движением заклинателя:</p>
+            <p>Красное: спец-единица с нужной функцией.</p>
+            <p>Белое: Низший Бессмертный. Маг становится символом для созданного Бессмертного.</p>
+            <p>Зелёное: упырь.</p>
+            <p>Чёрное: кадавр.</p>
+            <p>Подробнее о возможностях высшей и низшей нечисти см. главу «Нежить», стр. 112</p>
         </>,
     },
     {
@@ -1338,10 +1816,25 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.withExtra(1, 1, DURATION.MINUTES),
         examples: 'колыбельная; порошок или пыль, попавшая в глаза.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.QUACKERY,
+            BACKGROUND.SHAMANISM,
+        ],
         description: <>
-            <p>Некоторым магам нравится сокрушать орды врагов и разрывать их на мелкие кусочки, но те, кто предпочитают действовать тихо или отличаются миролюби¬ем, часто прибегают к этой силе.</p>
-            <p>Колдун выбирает центр и устанавливает средний шаблон, затем осуществляет проверку сверхъестественного навыка. Все живые существа (не нежить и не ме¬ханизмы) в зоне действия силы должны осуществить проверку характера (со штрафом —2 при подъёме у колдуна). При провале жертва засыпает.</p>
-            <p>Громкий шум будит спящих, как если бы это был нормальный сон (проверка внимания). Когда действие чар рассеивается, спящие просто просыпаются.</p>
+            <p>Некоторым магам нравится сокрушать орды врагов и разрывать их на мелкие кусочки, но
+            те, кто предпочитают действовать тихо или отличаются миролюбием, часто прибегают к этой
+            силе.</p>
+            <p>Колдун выбирает центр и устанавливает средний шаблон, затем осуществляет проверку
+            сверхъестественного навыка. Все живые существа (не нежить и не механизмы) в зоне
+            действия силы должны осуществить проверку характера (со штрафом —2 при подъёме у
+            колдуна). При провале жертва засыпает.</p>
+            <p>Громкий шум будит спящих, как если бы это был нормальный сон (проверка внимания).
+            Когда действие чар рассеивается, спящие просто просыпаются.</p>
         </>,
     },
     {
@@ -1355,10 +1848,33 @@ const powers = [
         Длительность: 3 (1 фрагмент в раунд).
         `,
         examples: 'пламя, лёд, шипы, силовое поле, кости.',
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
-            <p>При помощи этой силы персонаж создаёт прочную и неподвижную стену, которая ограждает его от атак или может послужить ловушкой для оппонента.</p>
-            <p>Из чего бы ни была сделана стена (лёд, шипы, ка¬мень, чистая энергия), её стойкость равна 10. По¬тратив 1 ПС, персонаж создаёт один фрагмент стены площадью в 1 клетку. В «реальности» её толщина — от нескольких сантиметров, если это булыжник или другой твёрдый материал, до полуметра, если она из костей, изо льда и т. п. Если вы используете тактическую карту, начертите стену по линиям со¬прикосновения клеток. Точное расположение фраг¬ментов стены определяет сам персонаж, но каждый фрагмент (кроме самого первого) должен быть со¬единён с другим фрагментом.</p>
-            <p>Когда чары рассеются, или один из фрагментов оказывается разрушен, стена обращается в пыль или исчезает. Никаких следов не остаётся. Каждый фрагмент стены можно разрушить, если нанесённый урон оказался выше её стойкости. Стены материаль¬ны и могут быть сломаны, как любые другие предме¬ты. Считается, что защита стены равна 2 (дистанци¬онные атаки осуществляются согласно правилам), но подъёмы при атаке не дают преимуществ, взрыв¬ных бросков нет. Противник может перелезть стену со штрафом —2 к проверке лазанья, если она сделана из твёрдого материала. Огненная стена наносит 2d4 урона любому, кто попытается пройти сквозь неё.</p>
+            <p>При помощи этой силы персонаж создаёт прочную и неподвижную стену, которая ограждает
+            его от атак или может послужить ловушкой для оппонента.</p>
+            <p>Из чего бы ни была сделана стена (лёд, шипы, камень, чистая энергия), её стойкость
+            равна 10. Потратив 1 ПС, персонаж создаёт один фрагмент стены площадью в 1 клетку. В
+            «реальности» её толщина — от нескольких сантиметров, если это булыжник или другой
+            твёрдый материал, до полуметра, если она из костей, изо льда и т. п. Если вы
+            используете тактическую карту, начертите стену по линиям соприкосновения клеток. Точное
+            расположение фрагментов стены определяет сам персонаж, но каждый фрагмент (кроме самого
+            первого) должен быть соединён с другим фрагментом.</p>
+            <p>Когда чары рассеются, или один из фрагментов оказывается разрушен, стена обращается
+            в пыль или исчезает. Никаких следов не остаётся. Каждый фрагмент стены можно разрушить,
+            если нанесённый урон оказался выше её стойкости. Стены материальны и могут быть
+            сломаны, как любые другие предметы. Считается, что защита стены равна 2 (дистанционные
+            атаки осуществляются согласно правилам), но подъёмы при атаке не дают преимуществ,
+            взрывных бросков нет. Противник может перелезть стену со штрафом —2 к проверке лазанья,
+            если она сделана из твёрдого материала. Огненная стена наносит 2d4 урона любому, кто
+            попытается пройти сквозь неё.</p>
         </>,
     },
     {
@@ -1368,12 +1884,41 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS),
         duration: DURATION.withExtra(3, 1),
         examples: 'пасс рукой, магический жезл, взгляд.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.LUCK,
+        ],
         description: <>
-            <p>Телекинез — способность переместить один объ¬ект или существо (включая себя) при помощи своей воли. Вес, который персонаж может поднять, изме¬ряется в килограммах и равен характерх5 при успе¬хе и характерх25 при подъёме.</p>
-            <p>Перемещение живых существ: живые существа могут сопротивляться. Жертва осуществляет встреч¬ную проверка характера. Если результат провер¬ки характера жертвы выше, чем результат проверки сверхъестественного навыка колдуна, жертва остаётся на своём месте. Если жертва проигрывает, её подни¬мают в воздух, и у неё уже нет шанса высвободиться.</p>
-            <p>Жертва может ухватиться за что-нибудь, чтобы её не смогли поднять. В таком случае она осуще¬ствляет встречную проверку физической силы про¬тив сверхъестественного навыка колдуна. Если побе¬ждает жертва, значит, ей удалось удержаться, и сила на неё никак не повлияла в этом раунде.</p>
-            <p>Применять оружие: с помощью телекинеза мож¬но управлять оружием. При этом вместо драки ис¬пользуется сверхъестественный навык персонажа, а урон высчитывается исходя из характера персона¬жа, а не физической силы. Меч, наносящий сuля+d6 урона, например, при использовании телекинеза бу¬дет наносить характер+дв урона. В остальном ору¬жие используется согласно правилам, в том числе, подъём наносит дополнительный урон.</p>
-            <p>Швырять врагов: особо жестокие персонажи поль¬зуются телекинезом, чтобы опрокидывать врагов и швырять их об стены. При помощи телекинеза пер¬сонаж может переместить врага в любом направлении на расстояние в клетках в раунд, соответствующее его смекалке. Оппонент, упавший на землю получает урон согласно правилам по падению. Жертва, которая столкнулась со стеной или иным твёрдым препятстви¬ем, получает количество урона, равное характеру кол¬дуна +d6. Если персонаж с характером d12 впечатал орка в стену, орк получит d12+d6 урона.</p>
+            <p>Телекинез — способность переместить один объект или существо (включая себя) при
+            помощи своей воли. Вес, который персонаж может поднять, измеряется в килограммах и
+            равен характер х 5 при успехе и характер х 25 при подъёме.</p>
+            <p>Перемещение живых существ: живые существа могут сопротивляться. Жертва осуществляет
+            встречную проверка характера. Если результат проверки характера жертвы выше, чем
+            результат проверки сверхъестественного навыка колдуна, жертва остаётся на своём месте.
+            Если жертва проигрывает, её поднимают в воздух, и у неё уже нет шанса
+            высвободиться.</p>
+            <p>Жертва может ухватиться за что-нибудь, чтобы её не смогли поднять. В таком случае
+            она осуществляет встречную проверку физической силы против сверхъестественного навыка
+            колдуна. Если побеждает жертва, значит, ей удалось удержаться, и сила на неё никак не
+            повлияла в этом раунде.</p>
+            <p>Применять оружие: с помощью телекинеза можно управлять оружием. При этом вместо
+            драки используется сверхъестественный навык персонажа, а урон высчитывается исходя из
+            характера персонажа, а не физической силы. Меч, наносящий сuла + d6 урона, например,
+            при использовании телекинеза будет наносить характер + д8 урона. В остальном оружие
+            используется согласно правилам, в том числе, подъём наносит дополнительный урон.</p>
+            <p>Швырять врагов: особо жестокие персонажи пользуются телекинезом, чтобы опрокидывать
+            врагов и швырять их об стены. При помощи телекинеза персонаж может переместить врага в
+            любом направлении на расстояние в клетках в раунд, соответствующее его смекалке.
+            Оппонент, упавший на землю получает урон согласно правилам по падению. Жертва, которая
+            столкнулась со стеной или иным твёрдым препятствием, получает количество урона, равное
+            характеру колдуна + d6. Если персонаж с характером d12 впечатал орка в стену, орк
+            получит d12+d6 урона.</p>
         </>,
     },
     {
@@ -1383,11 +1928,37 @@ const powers = [
         range: DISTANCE.SPECIAL,
         duration: DURATION.INSTANT,
         examples: 'облако дыма, искажение и исчезновение, превращение в стрелу или молнию.',
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
-            <p>Эта сила позволяет персонажу исчезнуть и сра¬зу же появиться на расстоянии до 10 клеток за каж¬дые 3 потраченных ПС, или 15 клеток при подъёме. Телепортация считается одновременно как действи¬ем, так и перемещением. Тем не менее, персонаж мо¬жет предпринять несколько разных действий, учиты¬вая стандартные штрафы (включая бег, добавляющий d6 клеток шага). Ближайшие противники не получа¬ют свободной атаки по персонажу, который выходит из ближнего боя при помощи телепортации.</p>
-            <p>Если персонаж хочет переместиться в место вне зоны его видимости, он должен осуществить провер¬ку смекалки со штрафом -2. Если персонаж собира¬ется телепортироваться в незнакомое место, которо¬го он никогда прежде не видел, штраф составит —4. Провал означает, что персонаж столкнулся с препят¬ствием. Он возвращается на исходную позицию в со-стоянии шока. При осложнении (1), проблема стано¬вится серьёзнее. Персонаж оказывается не только в шоке, но получает 2d6 урона.</p>
-            <p>При телепортации персонаж не может проникнуть внутрь объекта без соразмерных персонажу поло¬стей (сплошная скала, например). Сила тут же воз¬вращает персонажа туда, откуда он пытался уйти, со всеми описанными выше последствиями.</p>
-            <p>Перемещаться с другими: персонаж может пе¬ремещаться вместе с другими живыми существами, но каждый дополнительный пассажир стоит колду¬ну уровня усталости. Персонаж может прихватить с собой больше чем двоих пассажиров, но после это¬го он мгновенно переходит в состояние при смерти. Каждый уровень усталости снимается часом отдыха.</p>
+            <p>Эта сила позволяет персонажу исчезнуть и сразу же появиться на расстоянии до 10
+            клеток за каждые 3 потраченных ПС, или 15 клеток при подъёме. Телепортация считается
+            одновременно как действием, так и перемещением. Тем не менее, персонаж может
+            предпринять несколько разных действий, учитывая стандартные штрафы (включая бег,
+            добавляющий d6 клеток шага). Ближайшие противники не получают свободной атаки по
+            персонажу, который выходит из ближнего боя при помощи телепортации.</p>
+            <p>Если персонаж хочет переместиться в место вне зоны его видимости, он должен
+            осуществить проверку смекалки со штрафом -2. Если персонаж собирается телепортироваться
+            в незнакомое место, которого он никогда прежде не видел, штраф составит —4. Провал
+            означает, что персонаж столкнулся с препятствием. Он возвращается на исходную позицию в
+            состоянии шока. При осложнении (1), проблема становится серьёзнее. Персонаж оказывается
+            не только в шоке, но получает 2d6 урона.</p>
+            <p>При телепортации персонаж не может проникнуть внутрь объекта без соразмерных
+            персонажу полостей (сплошная скала, например). Сила тут же возвращает персонажа туда,
+            откуда он пытался уйти, со всеми описанными выше последствиями.</p>
+            <p>Перемещаться с другими: персонаж может перемещаться вместе с другими живыми
+            существами, но каждый дополнительный пассажир стоит колдуну уровня усталости. Персонаж
+            может прихватить с собой больше чем двоих пассажиров, но после этого он мгновенно
+            переходит в состояние при смерти. Каждый уровень усталости снимается часом отдыха.</p>
         </>,
     },
     {
@@ -1397,11 +1968,26 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS),
         duration: DURATION.withExtra(3, 2),
         examples: 'жесты, зелья, слова силы.',
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.DEMONOLOGY,
+        ],
         description: <>
-            <p>При помощи этой силы можно увеличить цель, ко¬торая получает +1 размер за каждые 2 потрачен¬ных ПС. Каждое увеличение размера повышает стой¬кость на 1, а также физическую силу на ступень.</p>
-            <p>Уменьшение сокращает размеры цели на 1 за каждые 2 ПС до минимума —2 (примерный размер крысы).</p>
-            <p>Каждое сокращение размера уменьшает силу жертвы на ступень (до минимума d4) и его стойкость на 1 (до минимума 2).</p>
-            <p>Для противостояния превращению существо мо¬жет сделать встречную проверку характера против сверхъестественного навыка колдуна.</p>
+            <p>При помощи этой силы можно увеличить цель, которая получает +1 размер за каждые 2
+            потраченных ПС. Каждое увеличение размера повышает стойкость на 1, а также физическую
+            силу на ступень.</p>
+            <p>Уменьшение сокращает размеры цели на 1 за каждые 2 ПС до минимума —2 (примерный
+            размер крысы).</p>
+            <p>Каждое сокращение размера уменьшает силу жертвы на ступень (до минимума d4) и его
+            стойкость на 1 (до минимума 2).</p>
+            <p>Для противостояния превращению существо может сделать встречную проверку характера
+            против сверхъестественного навыка колдуна.</p>
         </>,
     },
 
@@ -1412,11 +1998,18 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.withExtra(3, 2),
         examples: 'молитва, воодушевляющая / угрожающая речь, тёмное колдовство.',
+        backgrounds: [
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+        ],
         description: <>
-            Эта сила позволяет повысить значение любого па¬раметра цели на одну ступень при успехе и на две при подъёме. Площадь воздействия силы — средний шаблон. Обратите внимание, что параметр цели может превысить d12 (каждое превышение даёт +1 к резуль¬тату проверки). Например, при подъёме параметр d12 на время действия силы увеличится до d12+2.
-        При помощи этой же силы можно понизить пара¬метр оппонента (площадь воздействия силы не меняет¬ся). Это встречная проверка характера жертвы против сверхъестественного навыка заклинателя. Если выигры¬вает атакующий, любой параметр жертвы (по выбору заклинателя) снижается на одну ступень, при подъ¬ёме — на две. Параметр не может упасть ниже d4.
-        Тип воздействия и задействованные параметры оди¬наковы для всех целей заклинания.
-        Дополнительный эффект: потратив ещё 2 пункта силы, можно увеличить площадь воздействия силы до большого шаблона.
+            <p>Эта сила позволяет повысить значение любого па¬раметра цели на одну ступень при успехе и на две при подъёме. Площадь воздействия силы — средний шаблон. Обратите внимание, что параметр цели может превысить d12 (каждое превышение даёт +1 к резуль¬тату проверки). Например, при подъёме параметр d12 на время действия силы увеличится до d12+2.</p>
+            <p>При помощи этой же силы можно понизить пара¬метр оппонента (площадь воздействия силы не меняет¬ся). Это встречная проверка характера жертвы против сверхъестественного навыка заклинателя. Если выигры¬вает атакующий, любой параметр жертвы (по выбору заклинателя) снижается на одну ступень, при подъ¬ёме — на две. Параметр не может упасть ниже d4.</p>
+            <p>Тип воздействия и задействованные параметры оди¬наковы для всех целей заклинания.</p>
+            <p>Дополнительный эффект: потратив ещё 2 пункта силы, можно увеличить площадь воздействия силы до большого шаблона.</p>
         </>,
     },
     {
@@ -1426,9 +2019,18 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.INSTANT,
         examples: 'наложение рук, прикосновение священ¬ным символом, молитва, глоток воды.',
-        description: `Исцеление ранений, полученных больше часа на¬зад. Эта сила требует 10 ПСи в остальном действует в точности как сила исцеление. Применима в том чис¬ле для нейтрализации ядов и лечения болезней.
-        Великое исцеление можно использовать для лече¬ния постоянных увечий. Требуется проверка сверхъ¬естественного навыка со штрафом -4, 1d6 часов и 20 пунктов силы. Увечье можно попытаться исце¬лить только один раз. Если эта попытка провалится, то увечье считается неизлечимым.
-        `,
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.QUACKERY,
+        ],
+        description: <>
+            <p>Исцеление ранений, полученных больше часа на¬зад. Эта сила требует 10 ПСи в остальном действует в точности как сила исцеление. Применима в том чис¬ле для нейтрализации ядов и лечения болезней.</p>
+            <p>Великое исцеление можно использовать для лече¬ния постоянных увечий. Требуется проверка сверхъ¬естественного навыка со штрафом -4, 1d6 часов и 20 пунктов силы. Увечье можно попытаться исце¬лить только один раз. Если эта попытка провалится, то увечье считается неизлечимым.</p>
+        </>,
     },
     {
         rank: RANKS.VETERAN,
@@ -1439,9 +2041,20 @@ const powers = [
         Пункты силы: 4.
         Длительность: 1 вопрос.
         Расстояние: касание.`,
-        description: `Позволяет мистику войти в контакт с духом умерше¬го человека и задать вопрос мёртвому персонажу, как врагу, так и союзнику. При успехе покойник ответит коротко и туманно, при подъёме - коротко и конкретно.
-        Сила не действует на упокоенную и неупокоенную нежить, как на высшую, так и на низшую. Действию силы неподвластны Духи и Чудовища любых Движений.
-        `,
+        backgrounds: [
+            BACKGROUND.NECROBIOTICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.DEMONOLOGY,
+        ],
+        description: <>
+            <p>Позволяет мистику войти в контакт с духом умерше¬го человека и задать вопрос мёртвому персонажу, как врагу, так и союзнику. При успехе покойник ответит коротко и туманно, при подъёме - коротко и конкретно.</p>
+            <p>Сила не действует на упокоенную и неупокоенную нежить, как на высшую, так и на низшую. Действию силы неподвластны Духи и Чудовища любых Движений.</p>
+        </>,
     },
     {
         rank: RANKS.VETERAN,
@@ -1450,11 +2063,24 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.INSTANT,
         examples: 'священные предметы, оккультные сим¬волы, пригоршня соли.',
-        description: `Будь то духи, элементали или демоны — эта сила по¬зволит изгнать их всех. Изгнанию подвержено любое создание из иного измерения (по решению ведущего).
-        При использовании этой силы осуществляется встречная проверка сверхъестественного навыка пер¬сонажа против характера цели. При успехе цель в шоке. При подъёме — изгнана в её родное измере¬ние. Однако если цель — дикая карта, — каждый подъём на применении этой силы наносит ранение. Если у цели уже накопилось три ранения, то при по¬лучении четвёртого она изгоняется в родное измере¬ние, но не уничтожается.
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+            BACKGROUND.SPIRITUALISM,
+
+            BACKGROUND.WITCHCRAFT,
+            BACKGROUND.SHAMANISM,
+
+            BACKGROUND.DEMONOLOGY,
+        ],
+        description: <>
+            <p>Будь то духи, элементали или демоны — эта сила по¬зволит изгнать их всех. Изгнанию подвержено любое создание из иного измерения (по решению ведущего).</p>
+            <p>При использовании этой силы осуществляется встречная проверка сверхъестественного навыка пер¬сонажа против характера цели. При успехе цель в шоке. При подъёме — изгнана в её родное измере¬ние. Однако если цель — дикая карта, — каждый подъём на применении этой силы наносит ранение. Если у цели уже накопилось три ранения, то при по¬лучении четвёртого она изгоняется в родное измере¬ние, но не уничтожается.</p>
         
-        С помощью силы Изгнание можно уничтожать нежить, подробнее об этом смотри на стр.121. Кроме того с помощью этой силы можно изгнать враждебное существо-союзника, призванного противником с помощью силы Призыв союзника в любой момент боя, но только в инициативу персонажа (как обычное действие)
-        `,
+            <p>С помощью силы Изгнание можно уничтожать нежить, подробнее об этом смотри на стр.121. Кроме того с помощью этой силы можно изгнать враждебное существо-союзника, призванного противником с помощью силы Призыв союзника в любой момент боя, но только в инициативу персонажа (как обычное действие)</p>
+        </>,
     },
     {
         rank: RANKS.VETERAN,
@@ -1463,11 +2089,20 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.withExtra(3, 1),
         examples: 'светящиеся глаза, покачивающиеся на цепочке карманные часы, кукла вуду.',
-        description: `При помощи этой силы можно убедить других драться за вас. Некоторые делают это посредством беспардонного контроля над разумом жертвы. Дру¬гие — создают зрительные и слуховые иллюзии.
-        Использование этой силы требует успеха на встреч¬ной проверке сверхъестественного навыка персона¬жа против характера жертвы. Это даёт над целью полный контроль. Жертва будет драться с друзья¬ми и даже совершит самоубийство, хотя именно эти приказы позволяют ей ещё раз осуществить встреч¬ную проверку, чтобы попробовать разрушить чары.
-        `,
-    },
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
 
+            BACKGROUND.HERMETICS,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+        ],
+        description: <>
+            <p>При помощи этой силы можно убедить других драться за вас. Некоторые делают это посредством беспардонного контроля над разумом жертвы. Дру¬гие — создают зрительные и слуховые иллюзии.</p>
+            <p>Использование этой силы требует успеха на встреч¬ной проверке сверхъестественного навыка персона¬жа против характера жертвы. Это даёт над целью полный контроль. Жертва будет драться с друзья¬ми и даже совершит самоубийство, хотя именно эти приказы позволяют ей ещё раз осуществить встреч¬ную проверку, чтобы попробовать разрушить чары.</p>
+        </>,
+    },
     {
         rank: RANKS.VETERAN,
         title: 'Полёт',
@@ -1475,11 +2110,23 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 1),
         examples: 'порывистый ветер, крылья, метла.',
-        description: `Эта сила позволяет персонажу лететь, передвига¬ясь на количество клеток, соответствующее его шагу. Его манёвренность равна 0. Можно удвоить шаг, по¬тратив удвоенное количество ПС.
-        Дополнительные цели: можно охватить до 5 целей, потратив соответствующее количество ПС.
-        Герой
-        `,
+        backgrounds: [
+            BACKGROUND.GILOMORPHETICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.DEMONOLOGY,
+        ],
+        description: <>
+            <p>Эта сила позволяет персонажу лететь, передвига¬ясь на количество клеток, соответствующее его шагу. Его манёвренность равна 0. Можно удвоить шаг, по¬тратив удвоенное количество ПС.</p>
+            <p>Дополнительные цели: можно охватить до 5 целей, потратив соответствующее количество ПС.</p>
+        </>,
     },
+
     {
         rank: RANKS.HERO,
         title: 'Иссушение',
@@ -1487,11 +2134,22 @@ const powers = [
         range: DISTANCE.withUnits(STATS.SMARTS, 2),
         duration: DURATION.INSTANT,
         examples: 'молитва, шёпот, жесты.',
-        description: `Эта сила отторгает жертву от источника её сил, ограничивая возможности применения магии.
-        Персонаж выбирает одну цель в пределах досягае¬мости и осуществляет встречную проверку сверхъ¬естественных навыков. На атакующего налагается штраф —2, если у цели иной источник силы (магия против чудес, суперсилы против безумной науки).
-        При успехе герой уничтожает 1d6+1 ПС цели. При подъёме — 1d8+2 ПС. Взрывных бросков нет. Безумные учёные теряют ПС всех своих изобретений (которые находятся в при них) одновременно и в рав¬ной мере.
-        Количество ПС жертвы не может падать ниже нуля. Пункты не переходят к атакующему — они просто теряются. Восстанавливаются они как обычно. Сила влияет только на персонажей с мистическим даром. На предметы она не воздействует, если только это не изобретения безумных учёных.
-        `,
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+        ],
+        description: <>
+            <p>Эта сила отторгает жертву от источника её сил, ограничивая возможности применения магии.</p>
+            <p>Персонаж выбирает одну цель в пределах досягае¬мости и осуществляет встречную проверку сверхъ¬естественных навыков. На атакующего налагается штраф —2, если у цели иной источник силы (магия против чудес, суперсилы против безумной науки).</p>
+            <p>При успехе герой уничтожает 1d6+1 ПС цели. При подъёме — 1d8+2 ПС. Взрывных бросков нет. Безумные учёные теряют ПС всех своих изобретений (которые находятся в при них) одновременно и в рав¬ной мере.</p>
+            <p>Количество ПС жертвы не может падать ниже нуля. Пункты не переходят к атакующему — они просто теряются. Восстанавливаются они как обычно. Сила влияет только на персонажей с мистическим даром. На предметы она не воздействует, если только это не изобретения безумных учёных.</p>
+        </>,
     },
     {
         rank: RANKS.HERO,
@@ -1500,10 +2158,22 @@ const powers = [
         range: DISTANCE.TOUCH,
         duration: DURATION.withExtra(3, 2),
         examples: 'призрачное тело, превращение в газ.',
-        description: `При успешной проверке сверхъестественного на¬выка персонаж становится бесплотным. Он не мо¬жет влиять на физический мир, но и физический мир не может оказывать никакого воздействия на него. Персонаж может проходить через стены, а немаги¬ческое оружие проходит прямо сквозь него. Предме¬ты, оказавшиеся при нём в момент активации силы, также неосязаемы.
-        В этом состоянии персонаж может взаимодейство¬вать с другими неосязаемыми сущностями (включая самого себя), он по-прежнему чувствителен к маги¬ческим атакам физической природы вроде стрелы, а также к магическим предметам.
-        Персонаж не может стать осязаемым, пока он вну¬три кого-то или чего-то. Если что-то подобное всё же произошло, персонажа выбрасывает в ближайшее подходящее место, и он в шоке.
-        `,
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.LUCK,
+        ],
+        description: <>
+            <p>При успешной проверке сверхъестественного на¬выка персонаж становится бесплотным. Он не мо¬жет влиять на физический мир, но и физический мир не может оказывать никакого воздействия на него. Персонаж может проходить через стены, а немаги¬ческое оружие проходит прямо сквозь него. Предме¬ты, оказавшиеся при нём в момент активации силы, также неосязаемы.</p>
+            <p>В этом состоянии персонаж может взаимодейство¬вать с другими неосязаемыми сущностями (включая самого себя), он по-прежнему чувствителен к маги¬ческим атакам физической природы вроде стрелы, а также к магическим предметам.</p>
+            <p>Персонаж не может стать осязаемым, пока он вну¬три кого-то или чего-то. Если что-то подобное всё же произошло, персонажа выбрасывает в ближайшее подходящее место, и он в шоке.</p>
+        </>,
     },
     {
         rank: RANKS.HERO,
@@ -1512,11 +2182,23 @@ const powers = [
         range: DISTANCE.SELF,
         duration: DURATION.withExtra(1, null, DURATION.MINUTES),
         examples: 'контакт с духами умерших, единение с божеством, допрос демона.',
-        description: `Эта сила позволяет персонажу вступить в контакт с существом иного мира для сбора сведений. По¬скольку колдун взывает к сущностям из других из¬мерений, он изрядно устаёт.
-        При успехе колдун может задать один вопрос, под¬разумевающий ответы «да», «нет» или же «может быть» (если точного ответа дать нельзя). При подъ¬ёме персонаж получает ответ из пяти слов или мень¬ше (впрочем, ведущий может дать более распростра¬нённый, но запутанный ответ).
-        Длительность заклинания — одна минута, в течение которой персонаж не может перемещаться или пред¬принимать какие-либо другие действия. Если пер¬сонаж во время прорицания оказывается в шоке, он должен успешно осуществить проверку смекалки, или контакт с другими измерениями будет прерван.
-        Если вопрос касается живого существа (включая тех, кого «оживили» мистическим образом, например, не¬жить, големы, элементали), то тогда осуществляется встречная проверка сверхъестественного навыка про-рицателя против характера существа. От прорицате¬ля можно также спрятаться при помощи силы скрыть сверхъестественное. Если на существо наложены эти чары, прорицатель сначала должен перебороть эту силу и при успехе осуществить проверку сверхъесте¬ственного навыка против характера существа.        
-        `,
+        backgrounds: [
+            BACKGROUND.FLUCTUATICS,
+
+            BACKGROUND.HERMETICS,
+            BACKGROUND.THEURGY,
+
+            BACKGROUND.WITCHCRAFT,
+
+            BACKGROUND.ACTIONISM,
+            BACKGROUND.LUCK,
+        ],
+        description: <>
+            <p>Эта сила позволяет персонажу вступить в контакт с существом иного мира для сбора сведений. По¬скольку колдун взывает к сущностям из других из¬мерений, он изрядно устаёт.</p>
+            <p>При успехе колдун может задать один вопрос, под¬разумевающий ответы «да», «нет» или же «может быть» (если точного ответа дать нельзя). При подъ¬ёме персонаж получает ответ из пяти слов или мень¬ше (впрочем, ведущий может дать более распростра¬нённый, но запутанный ответ).</p>
+            <p>Длительность заклинания — одна минута, в течение которой персонаж не может перемещаться или пред¬принимать какие-либо другие действия. Если пер¬сонаж во время прорицания оказывается в шоке, он должен успешно осуществить проверку смекалки, или контакт с другими измерениями будет прерван.</p>
+            <p>Если вопрос касается живого существа (включая тех, кого «оживили» мистическим образом, например, не¬жить, големы, элементали), то тогда осуществляется встречная проверка сверхъестественного навыка про-рицателя против характера существа. От прорицате¬ля можно также спрятаться при помощи силы скрыть сверхъестественное. Если на существо наложены эти чары, прорицатель сначала должен перебороть эту силу и при успехе осуществить проверку сверхъесте¬ственного навыка против характера существа.</p>
+        </>,
     },
 ];
 

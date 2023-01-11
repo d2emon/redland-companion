@@ -1,11 +1,13 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+import ArcaneBadge from './ArcaneBadge';
 import PowerDuration from './PowerDuration';
 import PowerRange from './PowerRange';
 import RankBadge from './RankBadge';
 
 function PowerCard(props) {
     const {
+        backgrounds,
         description,
         duration,
         examples,
@@ -29,6 +31,11 @@ function PowerCard(props) {
             </Row>
         </Card.Header>
         <Card.Body>
+            <Row>
+                <Col>
+                    { backgrounds && <ArcaneBadge backgrounds={backgrounds} /> }
+                </Col>
+            </Row>
             <Row>
                 <Col md={4}>
                     <Card>

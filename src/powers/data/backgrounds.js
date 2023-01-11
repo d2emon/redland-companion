@@ -1,0 +1,12 @@
+export const GILOMORPHETICS = 'GILOMORPHETICS';
+export const FLUCTUATICS = 'FLUCTUATICS';
+export const NECROBIOTICS = 'NECROBIOTICS';
+export const HERMETICS = 'HERMETICS';
+export const THEURGY = 'THEURGY';
+export const SPIRITUALISM = 'SPIRITUALISM';
+export const QUACKERY = 'QUACKERY';
+export const WITCHCRAFT = 'WITCHCRAFT';
+export const SHAMANISM = 'SHAMANISM';
+export const ACTIONISM = 'ACTIONISM';
+export const LUCK = 'LUCK';
+export const DEMONOLOGY = 'DEMONOLOGY';
